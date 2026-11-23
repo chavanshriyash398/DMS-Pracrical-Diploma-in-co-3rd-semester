@@ -1,0 +1,13 @@
+create table emp5(name varchar(19));
+insert into emp5 values('shri');
+savepoint s1;
+insert into emp5 values('yash');
+select * from emp5;
+savepoint s2;
+insert into emp5 values('shriyash');
+rollback to s1;
+commit;
+rollback;
+insert into emp5 values ('raj');
+savepoint sp3;
+insert into emp5 values('raj');
